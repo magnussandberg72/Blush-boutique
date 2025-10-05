@@ -3,31 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fatimah Support</title>
-  <style>
-    body, html {margin:0;padding:0;height:100%;width:100%;font-family:Arial,sans-serif;}
-    .hero {position:relative;height:100vh;width:100vw;background:url('fatimah.jpg') no-repeat center center/cover;}
-    .overlay {position:absolute;inset:0;background:rgba(0,0,0,0.4);}
-    .content {position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;color:white;padding:0 1rem 4rem;}
-    h1 {font-size:2rem;font-weight:bold;margin-bottom:1rem;}
-    p {max-width:600px;font-size:1rem;margin-bottom:2rem;}
-    .buttons {display:flex;gap:1rem;}
-    .btn {padding:0.75rem 1.5rem;border:none;border-radius:0.5rem;font-weight:bold;cursor:pointer;text-decoration:none;color:white;box-shadow:0 4px 6px rgba(0,0,0,0.2);transition:background 0.3s ease;}
-    .btn-pink {background:#ec4899;} .btn-pink:hover {background:#db2777;}
-    .btn-green {background:#22c55e;} .btn-green:hover {background:#16a34a;}
-  </style>
+  <title>Fatimah Support 🌸</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="hero">
-    <div class="overlay"></div>
-    <div class="content">
+  <div class="container">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="image-box">
+        <img src="fatimah.jpg" alt="Fatimah smiling" />
+      </div>
       <h1>🌸 Welcome to Fatimah Support 🌸</h1>
-      <p>Learn about Fatimah’s story and how you can support her directly.</p>
-      <div class="buttons">
+      <p class="text-center">
+        Learn about Fatimah’s story and how you can support her directly.
+      </p>
+
+      <div class="button-box">
         <a href="presentation.html" class="btn btn-pink">💖 Learn about Fatimah</a>
         <a href="support.html" class="btn btn-green">🤝 Support Fatimah</a>
       </div>
-    </div>
+    </section>
+
+    <!-- BIBLE APP SECTION -->
+    <section class="bible-app-section">
+      <h2>📖 Faith & Strength</h2>
+      <p>
+        Fatimah is a Christian woman who sometimes reads the Bible for comfort and guidance. 
+        Her faith helps her stay strong through life’s challenges. 🌿
+      </p>
+      <div class="bible-links">
+        <a href="https://play.google.com/store/apps/details?id=com.lifechurch.bible" 
+           class="btn btn-pink" target="_blank">
+          📱 Download Bible App (Life.Church)
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      By Magnus T. Gustav Sandberg — Vision Framtid 2025 ✝️
+    </footer>
   </div>
 </body>
 </html>
