@@ -1,0 +1,172 @@
+/* ========== GLOBAL BASICS ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fff5f9, #f9f9ff);
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 5rem;
+}
+
+/* ========== TEXT & HEADERS ========== */
+h1, h2 {
+  color: #c2185b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ========== HERO / IMAGE ========== */
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== VIDEO ========== */
+.video-box {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.video-box iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ========== STORY CARD ========== */
+.story {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.story h2 {
+  color: #ad1457;
+  margin-bottom: 1rem;
+}
+
+.story .italic {
+  font-style: italic;
+  text-align: right;
+  color: #555;
+}
+
+/* ========== BIBLE SECTION ========== */
+.bible-app-section {
+  background: #fffafc;
+  border: 1px solid #f5d0e1;
+  border-radius: 18px;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.bible-app-section h2 {
+  color: #b91c1c;
+  margin-bottom: 0.6rem;
+}
+
+.bible-links {
+  margin-top: 1rem;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+}
+
+.btn-pink:hover {
+  background: linear-gradient(135deg, #f50057, #f48fb1);
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  background: linear-gradient(135deg, #34d399, #059669);
+}
+
+.btn-green:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+}
+
+.btn-gray {
+  background: #555;
+}
+
+.btn-gray:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ========== BUTTON BOX ========== */
+.button-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+/* ========== HERO ADJUSTMENT ========== */
+.hero {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.hero .btn {
+  margin-top: 1.5rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  padding: 2rem 0 1rem;
+}
