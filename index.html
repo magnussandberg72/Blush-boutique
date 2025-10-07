@@ -7,14 +7,12 @@
   <meta name="description" content="Learn about Fatimah’s story and how you can support her directly." />
   <style>
     :root{
-      --ink:#222222;
-      --ink-muted:#444444;
+      --ink:#222;
+      --ink-muted:#555;
       --pink:#e91e63;
-      --pink-2:#ff5fa2;
+      --pink-soft:#ffc4d6;
       --green:#22c55e;
       --green-2:#0ea75a;
-      --blue:#2196f3;
-      --paper:#ffffff;
       --bg-1:#fff5f8;
       --shadow:0 10px 28px rgba(0,0,0,.12);
       --radius:18px;
@@ -28,16 +26,28 @@
       color:var(--ink);
       background:var(--bg-1);
       line-height:1.6;
-      -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
 
-    /* ========== HERO (full screen) ========== */
+    /* HEADER – soft pink to white gradient */
+    .top-header {
+      background: linear-gradient(90deg, var(--pink-soft), #fff);
+      color:var(--pink);
+      text-align:center;
+      font-size:20px;
+      font-weight:700;
+      padding:14px;
+      border-bottom:2px solid #ffd6e3;
+      box-shadow:0 3px 10px rgba(0,0,0,0.12);
+      border-radius:0 0 16px 16px;
+    }
+
+    /* HERO */
     .hero{
       position:relative;
-      min-height:100vh;
+      min-height:90vh;
       display:flex;
-      align-items:center;
+      align-items:flex-end;
       justify-content:center;
       text-align:center;
       color:#fff;
@@ -47,117 +57,85 @@
       content:"";
       position:absolute; inset:0;
       background:url('fatimah.jpg') center/cover no-repeat;
-      transform:scale(1.02);
-      filter:contrast(1) saturate(1.05);
+      filter:brightness(1.05) contrast(1.1);
     }
     .hero::after{
       content:"";
       position:absolute; inset:0;
-      /* soft pink overlay fading to transparent for readability */
-      background:linear-gradient(
-        180deg,
-        rgba(255, 160, 190, .45) 0%,
-        rgba(0,0,0,.28) 65%,
-        rgba(0,0,0,.32) 100%
-      );
+      background:linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 100%);
     }
     .hero__content{
       position:relative; z-index:2;
-      padding:clamp(16px, 4vw, 28px);
-      max-width:min(90%, 820px);
-      animation:fadeUp .8s ease both .1s;
+      background:rgba(0,0,0,0.45);
+      padding:22px 18px;
+      border-radius:14px;
+      margin-bottom:60px;
+      width:90%;
+      max-width:700px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.3);
     }
     .hero h1{
       margin:0 0 .5rem;
-      font-size:clamp(28px, 5vw, 44px);
-      text-shadow:0 2px 10px rgba(0,0,0,.35);
+      font-size:clamp(26px, 5vw, 40px);
     }
     .hero p{
       margin:0 auto 1.3rem;
       max-width:48ch;
       font-size:clamp(16px, 2.6vw, 20px);
-      text-shadow:0 2px 10px rgba(0,0,0,.35);
     }
+
     .hero__actions{
       display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
       margin-top:8px;
     }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:.9rem 1.3rem; border-radius:14px; border:none;
       font-weight:700; text-decoration:none; color:#fff;
       box-shadow:var(--shadow);
-      transition:transform .08s ease, box-shadow .2s ease, opacity .2s ease;
+      transition:transform .08s ease, box-shadow .2s ease;
       will-change:transform;
     }
     .btn:active{ transform:translateY(1px) }
-    .btn:hover{ box-shadow:0 14px 34px rgba(0,0,0,.16) }
-    .btn--pink{ background:linear-gradient(90deg, var(--pink-2), var(--pink)) }
     .btn--green{ background:linear-gradient(90deg, var(--green), var(--green-2)) }
-    .btn--outline{
-      background:transparent; border:2px solid rgba(255,255,255,.85);
-      color:#fff; backdrop-filter: blur(2px);
-    }
-    .hero__scrollHint{
-      position:absolute; bottom:18px; left:50%; transform:translateX(-50%);
-      opacity:.85; font-weight:600; letter-spacing:.3px;
-    }
+    .btn--outline{ border:2px solid rgba(255,255,255,.9); background:transparent; }
 
-    /* ========== SECTIONS ========== */
+    /* SECTIONS */
     .section{
       padding: clamp(40px, 8vw, 80px) 16px;
       display:grid; place-items:center;
     }
     .card{
-      background:var(--paper);
+      background:#fff;
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       padding: clamp(18px, 4vw, 32px);
       max-width: min(92%, 840px);
-      opacity:0; transform: translateY(14px);
+      text-align:center;
+      color:var(--ink-muted);
     }
-    .card.is-in{ animation:fadeUp .7s ease forwards }
     .card h2{
       margin:0 0 .6rem; color:var(--pink);
-      font-size:clamp(22px, 3.6vw, 28px);
-      text-align:center;
-    }
-    .card p{ color:var(--ink-muted); margin:.4rem 0 }
-    .actions{
-      margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
     }
 
-    /* ========== SUPPORT STRIP ========== */
-    .support{
-      background: linear-gradient(180deg, #e8fff2, #f3fff7);
-      text-align:center;
-    }
-    .support .card{ background:#ffffff }
-
-    /* ========== FOOTER ========== */
     footer{
-      text-align:center; padding: 26px 16px 34px;
-      color:#2f2f2f; /* clean neutral, not #666 */
+      text-align:center;
+      padding: 26px 16px 34px;
+      color:#2f2f2f;
       font-weight:600;
     }
 
-    /* ========== Animations ========== */
-    @keyframes fadeUp{
-      from{ opacity:0; transform: translateY(16px) }
-      to  { opacity:1; transform: translateY(0) }
-    }
-
-    /* ========== Responsive tweaks ========== */
     @media (max-width:600px){
       .btn{ width:100% }
-      .hero__actions{ gap:10px }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <header class="hero" role="banner" aria-label="Fatimah full-page hero">
+  <div class="top-header">Welcome to Fatimah’s site ♥️</div>
+
+  <header class="hero">
     <div class="hero__content">
       <h1>🌺 Welcome to Fatimah Support 🌺</h1>
       <p>Learn about Fatimah’s story and how you can support her directly.</p>
@@ -166,68 +144,18 @@
         <a href="#faith" class="btn btn--outline">💚 Learn more</a>
       </div>
     </div>
-    <div class="hero__scrollHint">▼ Scroll</div>
   </header>
 
-  <!-- FAITH & STRENGTH -->
-  <section id="faith" class="section" aria-label="Faith & Strength">
-    <article class="card js-observe">
+  <section id="faith" class="section">
+    <article class="card">
       <h2>📖 Faith & Strength</h2>
-      <p>
-        Fatimah is a Christian woman who sometimes reads the Bible for comfort and guidance.
-        Her faith helps her stay strong through life’s challenges.
-      </p>
-      <div class="actions">
-        <a class="btn btn--pink" target="_blank" rel="noopener"
-           href="https://play.google.com/store/apps/details?id=com.lifechurch.android.bible">
-          📱 Bible App (Life.Church)
-        </a>
+      <p>Fatimah is a Christian woman who sometimes reads the Bible for comfort and guidance. Her faith helps her stay strong through life’s challenges.</p>
+      <div class="hero__actions">
         <a class="btn btn--green" href="presentation.html">💖 Learn about Fatimah</a>
       </div>
     </article>
   </section>
 
-  <!-- SUPPORT CTA STRIP -->
-  <section class="section support" aria-label="Support call to action">
-    <article class="card js-observe">
-      <h2>🤝 Support Fatimah</h2>
-      <p>
-        Every contribution helps with food, essentials, and care for her mother, Mavis.
-        Thank you for your kindness and compassion.
-      </p>
-      <div class="actions">
-        <a class="btn btn--green" href="support.html">🌍 Send Support via WorldRemit</a>
-      </div>
-    </article>
-  </section>
-
-  <footer>
-    ✝️ God bless you — Vision Framtid 2025
-  </footer>
-
-  <script>
-    // Smooth scroll for internal anchor
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
-    });
-
-    // Fade-in on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(ent=>{
-        if(ent.isIntersecting){
-          ent.target.classList.add('is-in');
-          io.unobserve(ent.target);
-        }
-      });
-    },{threshold: .2});
-    document.querySelectorAll('.js-observe').forEach(el=> io.observe(el));
-  </script>
+  <footer>✝️ God bless you — Vision Framtid 2025</footer>
 </body>
 </html>
