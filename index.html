@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blush Boutique – Women's Wear & Accessories</title>
-  <meta name="description" content="Blush Boutique – All kinds of women's wear and accessories. Elegance in every detail." />
+  <title>Blush Boutique — Women's Fashion & Accessories</title>
+  <meta name="description" content="Blush Boutique — timeless women's wear, accessories, and elegance curated by Sandra." />
   <link rel="icon" type="image/png" href="public/blush_boutique.png" />
 
   <style>
@@ -18,63 +18,59 @@
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
+      background: linear-gradient(to bottom right, var(--soft-cream), var(--blush-pink));
       color: var(--text-dark);
-      background: var(--soft-cream);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
+      overflow-x: hidden;
     }
 
     header {
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(rgba(255, 245, 248, 0.7), rgba(255, 245, 248, 0.9)),
-        url("public/blush-hero.jpg") center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0 1rem;
+      padding: 2rem 1rem 0.5rem;
     }
 
     h1 {
       font-family: "Playfair Display", serif;
-      font-size: 3rem;
       color: var(--deep-rose);
-      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      margin-bottom: 0.2rem;
     }
 
     h2 {
+      color: #555;
       font-weight: 400;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #4a4a4a;
+      margin-bottom: 1.5rem;
     }
 
-    p.tagline {
-      font-size: 1.1rem;
-      color: #5a5a5a;
-      margin-bottom: 2.5rem;
-      font-style: italic;
+    /* Hero banner */
+    .hero-banner {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(197, 75, 124, 0.25);
+      margin: 1.5rem auto 2rem;
+      display: block;
     }
 
-    .buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      padding: 0 1rem;
+      color: #333;
     }
 
     .btn {
       background: var(--deep-rose);
       color: white;
-      padding: 0.8rem 1.6rem;
+      padding: 0.9rem 1.8rem;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 500;
       box-shadow: 0 4px 10px rgba(197, 75, 124, 0.3);
       transition: all 0.25s ease;
+      display: inline-block;
+      margin: 0.6rem;
     }
 
     .btn:hover {
@@ -84,37 +80,56 @@
     }
 
     footer {
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 1.5rem 1rem;
       color: #777;
+      font-size: 0.9rem;
+      margin-top: 2rem;
     }
 
+    /* Mobile optimization */
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 1.9rem;
       }
       h2 {
+        font-size: 1.1rem;
+      }
+      p {
         font-size: 1rem;
+      }
+      .btn {
+        display: block;
+        width: 80%;
+        margin: 0.8rem auto;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>Blush Boutique</h1>
-    <h2>All kinds of women's wear and accessories</h2>
-    <p class="tagline">Elegance in every detail 💗</p>
-
-    <div class="buttons">
-      <a href="about.html" class="btn">💫 About Sandra</a>
-      <a href="shop.html" class="btn">👜 Explore the Boutique</a>
-    </div>
+    <h2>All kinds of women’s wear and accessories</h2>
+    <img src="public/blush_boutique.png" alt="Blush Boutique Banner" class="hero-banner" />
   </header>
+
+  <main>
+    <p>
+      Welcome to <strong>Blush Boutique</strong> — a warm, elegant space where timeless style meets modern comfort.  
+      Sandra carefully selects each piece to bring beauty, grace, and joy to everyday life.
+    </p>
+
+    <p>
+      Explore our boutique and discover clothing and accessories designed to inspire confidence and elegance, no matter the occasion.
+    </p>
+
+    <a href="about.html" class="btn">🌸 About Sandra</a>
+    <a href="shop.html" class="btn">🛍️ Shop Now</a>
+  </main>
 
   <footer>
     © 2025 Blush Boutique — Designed by Magnus T Gustav Sandberg
   </footer>
-
 </body>
 </html>
