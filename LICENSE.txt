@@ -9,7 +9,7 @@ All rights reserved / Alla rättigheter förbehållna
 ───────────────────────────────────────────────
 Denna licens omfattar alla projekt, sajter, appar och dokument skapade av  
 Magnus T Gustav Sandberg (Kalix, Sverige) – inklusive men inte begränsat till:  
-Vision Framtid, CORE Quantum, Fatimah-support, Mushroom Maniacs, Bauta-projekten, TempelKistan och deras underprojekt.
+Vision Framtid, CORE Quantum, Blush-boutique, Mushroom Maniacs, Bauta-projekten, TempelKistan och deras underprojekt.
 
 Licensen är **hybrid** – den förenar:
 - **Etisk och andlig skyddsnivå** (ViFr-etik: kärlek, rättfärdighet, nåd, sanning)
@@ -45,7 +45,7 @@ Villkor:
 ───────────────────────────────────────────────
 This license covers all projects, sites, apps and documents created by  
 Magnus T Gustav Sandberg (Kalix, Sweden) – including but not limited to:  
-Vision Framtid, CORE Quantum, Fatimah-support, Mushroom Maniacs, Bauta Projects, TempelKistan and their sub-modules.
+Vision Framtid, CORE Quantum, Blush-boutique, Mushroom Maniacs, Bauta Projects, TempelKistan and their sub-modules.
 
 The license is **hybrid** – combining:
 - **Ethical and spiritual protection** (ViFr Ethics: love, righteousness, grace, truth)  
