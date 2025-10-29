@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Sandra – Blush Boutique</title>
+  <meta name="description" content="Learn more about Sandra and her boutique Blush – timeless women’s wear and accessories with elegance in every detail." />
+  <link rel="icon" type="image/png" href="public/blush_boutique.png" />
+
+  <style>
+    :root {
+      --blush-pink: #f8d7e0;
+      --deep-rose: #c54b7c;
+      --soft-cream: #fff9fb;
+      --text-dark: #2e2e2e;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(to bottom right, var(--soft-cream), var(--blush-pink));
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    header {
+      padding: 2.5rem 1rem 1rem;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      color: var(--deep-rose);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .photo {
+      max-width: 280px;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      margin-bottom: 2rem;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      background: var(--deep-rose);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(197, 75, 124, 0.3);
+      transition: all 0.25s ease;
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+
+    .btn:hover {
+      background: #e06397;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(197, 75, 124, 0.4);
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 1.5rem 1rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      section {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Meet Sandra</h1>
+    <h2>The heart behind <em>Blush Boutique</em></h2>
+    <img src="public/blush.jpg" alt="Sandra in her boutique" class="photo" />
+  </header>
+
+  <section>
+    <p>
+      Sandra is a kind and creative woman from Germany with a passion for women’s fashion and timeless design.
+      She founded <strong>Blush Boutique</strong> to share her love for style and elegance — every piece she curates reflects warmth, confidence, and attention to detail.
+    </p>
+    <p>
+      Whether in her store or online, Sandra’s mission is simple: to help women feel beautiful and comfortable in their own skin.
+      Her collection includes classic outfits, modern accessories, and handpicked essentials that bring a little joy to everyday life.
+    </p>
+
+    <a href="shop.html" class="btn">🛍️ Visit the Boutique</a>
+  </section>
+
+  <footer>
+    © 2025 Blush Boutique — Designed by Magnus T Gustav Sandberg
+  </footer>
+</body>
+</html>
