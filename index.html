@@ -112,6 +112,49 @@
     </div>
   </section>
 
+<section class="contact">
+  <h2>💌 Contact Sandra</h2>
+  <p><a href="mailto:sandraan049@gmail.com">📧 Email</a></p>
+
+  <div class="copy-group">
+    <p>📞 <span id="phone">+1 305 574 4835</span></p>
+    <button class="copy-btn" onclick="copyText('phone')">📋 Copy</button>
+  </div>
+
+  <div class="copy-group">
+    <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States</span></p>
+    <button class="copy-btn" onclick="copyText('address')">📋 Copy</button>
+  </div>
+
+  <hr>
+
+  <h3>💝 Gifts & Support are appreciated</h3>
+
+  <div class="copy-group">
+    <p>💰 BTC:<br><span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span></p>
+    <button class="copy-btn" onclick="copyText('btc')">📋 Copy</button>
+  </div>
+
+  <div class="copy-group">
+    <p>💵 USDT (TRC20):<br><span id="usdt">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span></p>
+    <button class="copy-btn" onclick="copyText('usdt')">📋 Copy</button>
+  </div>
+
+  <div class="copy-group">
+    <p>💳 PayPal:<br><span id="paypal">sandraan049@gmail.com</span></p>
+    <button class="copy-btn" onclick="copyText('paypal')">📋 Copy</button>
+  </div>
+</section>
+
+<script>
+  function copyText(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied: " + text);
+    });
+  }
+</script>
+
   <footer>
     © 2025 Blush Boutique — Designed by Magnus T Gustav Sandberg
   </footer>
