@@ -162,6 +162,51 @@
 .copy-btn:hover {
   background: #555;
 }
+
+<style>
+  /* === Produktkort === */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    min-height: 480px; /* ⬆️ Gör kortet högre */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* === Bild i kortet === */
+  .card img {
+    width: 100%;
+    height: 340px;       /* ⬆️ gör bilden större och proportionerlig */
+    object-fit: cover;   /* ser till att bilden beskärs snyggt */
+    border-radius: 10px;
+  }
+
+  /* === Texten under bilden === */
+  .card h3 {
+    color: #b23b72;
+    margin-top: 12px;
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .card {
+      min-height: 420px; /* lite mindre på större skärmar */
+    }
+  }
+</style>
   </style>
 </head>
 
