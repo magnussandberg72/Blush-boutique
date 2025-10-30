@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop – Blush Boutique</title>
+  <title>Store – Blush Boutique</title>
   <meta name="description" content="Explore Blush Boutique – women's wear, bags, and accessories selected with love by Sandra." />
   <link rel="icon" type="image/png" href="public/blush_boutique.png" />
 
@@ -143,7 +143,7 @@
 
 <body>
   <header>
-    <h1>Shop Blush Boutique</h1>
+    <h1>The Store - Blush Boutique</h1>
     <p class="subtitle">Curated pieces of elegance, comfort, and modern charm 💗</p>
   </header>
 
@@ -175,25 +175,48 @@
   </div>
 
   <!-- Contact Info -->
-  <div class="contact">
-    💌 <strong>Contact Sandra</strong><br>
-    <a href="mailto:sandraan049@gmail.com">Email</a><br>
-    📞 +1 305 574 4835<br>
-    🏬 Blush Boutique, Aventura Mall<br>
-    19501 Biscayne Blvd, Aventura, FL 33180, United States
+  <section class="contact">
+  <h2>💌 Contact/Call the store/Sandra</h2>
+  <p><a href="mailto:sandraan049@gmail.com">📧 Email</a></p>
+
+  <div class="copy-group">
+    <p>📞 <span id="phone">+1 305 574 4835</span></p>
+    <button class="copy-btn" onclick="copyText('phone')">📋 Copy</button>
   </div>
 
-  <!-- Support / Gifts Section -->
-  <div class="support">
-    <strong>Gifts & Support are appreciated 💗</strong><br><br>
-    💰 <b>Crypto Addresses:</b>
-<br><br>
-    BTC: <span style="user-select:all;">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span>
-<br><br>
-    USDT (TRC20): <span style="user-select:all;">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span>
-<br><br>
-    💳 <b>PayPal:</b> <a href="mailto:sandraan049@gmail.com" style="color:#c54b7c;">Paypal</a>
+  <div class="copy-group">
+    <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States 🇺🇲</span></p>
+    <button class="copy-btn" onclick="copyText('address')">📋 Copy</button>
   </div>
+
+  <hr>
+
+  <h3>💝 Gifts & Support are appreciated</h3>
+
+  <div class="copy-group">
+    <p>💰 BTC (Bitcoin):<br><span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span></p>
+    <button class="copy-btn" onclick="copyText('btc')">📋 Copy adress</button>
+  </div>
+
+  <div class="copy-group">
+    <p>💵 USDT (TRC20):<br><span id="usdt">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span></p>
+    <button class="copy-btn" onclick="copyText('usdt')">📋 Copy adress</button>
+  </div>
+
+  <div class="copy-group">
+    <p>💳 PayPal:<br><span id="paypal">sandraan049@gmail.com</span></p>
+    <button class="copy-btn" onclick="copyText('paypal')">📋 Copy Paypal</button>
+  </div>
+</section>
+
+<script>
+  function copyText(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Copied: " + text);
+    });
+  }
+</script>
 
   <footer>
     © 2025 Blush Boutique — Designed by Magnus T Gustav Sandberg
