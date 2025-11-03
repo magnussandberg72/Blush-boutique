@@ -30,7 +30,7 @@
     h1 {
       font-family: "Playfair Display", serif;
       color: var(--deep-rose);
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-bottom: 0.5rem;
     }
 
@@ -67,9 +67,9 @@
     .card img {
       width: 100%;
       height: auto;
-      object-fit: contain; /* visar hela bilden */
-      max-height: 500px;   /* stoppar överlånga bilder */
+      object-fit: contain;
       background: #fff;
+      max-height: 500px;
       border-bottom: 1px solid #eee;
     }
 
@@ -87,7 +87,6 @@
       line-height: 1.5;
     }
 
-    /* ---------- Buttons ---------- */
     .btn.gray {
       background: #777;
       color: white;
@@ -107,7 +106,6 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.3);
     }
 
-    /* ---------- Copy Blocks ---------- */
     .copy-group {
       background: rgba(255, 255, 255, 0.7);
       margin: 1rem auto;
@@ -142,9 +140,7 @@
     }
 
     @media (max-width: 600px) {
-      .card img {
-        max-height: 420px;
-      }
+      .card img { max-height: 420px; }
     }
   </style>
 </head>
@@ -156,13 +152,18 @@
   </header>
 
   <div class="grid">
-    <!-- dina kort här, oförändrade -->
-    <!-- ex: -->
-    <div class="card">
-      <img src="public/skirt_4.jpg" alt="Wine skirt" />
-      <h3>Skirt</h3>
-      <p>Petite Wine Plisse Fitted Waist Maxi Skirt<br>SIZES 2 4 6 8 10<br><br>Price ; $25<br></p>
-    </div>
+    <div class="card"><img src="public/dress_1.jpg"><h3>Black Skirt</h3><p>Premium Black Woven Draped Fishtail Maxi Skirt<br>Size 4 6 8 10 12<br><br>Price ; $50</p></div>
+    <div class="card"><img src="public/shoe_1.jpg"><h3>Black Shoes</h3><p>Black Crinkle PU Buckle Kitten Heel Mule<br>Size 3 4 5 6 7<br><br>Price ; $25</p></div>
+    <div class="card"><img src="public/corsett.jpg"><h3>Mint Corset</h3><p>Mint Textured Sheer Floral Lace Corset<br>Size 4 6 8 10 12<br><br>Price ; $20</p></div>
+    <div class="card"><img src="public/boots_1.jpg"><h3>Black Boots</h3><p>Black PU Point Toe Knee High Block Heeled Boots<br>Size 3 4 5 6 7<br><br>Price ; $50</p></div>
+    <div class="card"><img src="public/boot_2.jpg"><h3>Black Boots</h3><p>Linzi Frosty Black Faux Leather Block Heeled Knee High Boot<br>Size 3 4 5 6 7<br><br>Price ; $70</p></div>
+    <div class="card"><img src="public/corsett_2.jpg"><h3>Black Corset</h3><p>Black Textured Sheer Floral Lace Corset<br>Size 4 6 8 10 12<br><br>Price ; $30</p></div>
+    <div class="card"><img src="public/dress_2.jpg"><h3>Mini Dress</h3><p>PLT Label Dark Red Hammered Satin Long Sleeve Plunge Mini Dress<br>Size 4 6 8 10 12<br><br>Price ; $30</p></div>
+    <div class="card"><img src="public/shoe_2.jpg"><h3>Sandals</h3><p>Nude Pu Square Toe Barley There High Heeled Sandals<br>Size 3 4 5 6 7<br><br>Price ; $20</p></div>
+    <div class="card"><img src="public/skirt_1.jpg"><h3>Skirt</h3><p>Petite Stone Crochet Low Rise Maxi Skirt<br>Size 4 6 8 10 12<br><br>Price ; $25</p></div>
+    <div class="card"><img src="public/skirt_2.jpg"><h3>Skirt</h3><p>Petite Stone Mid Rise Maxi Skirt<br>Size 2 4 6 8 10<br><br>Price ; $20</p></div>
+    <div class="card"><img src="public/skirt_3.jpg"><h3>Skirt</h3><p>Petite White Plisse Fitted Waist Maxi Skirt<br>Size 2 4 6 8 10<br><br>Price ; $30</p></div>
+    <div class="card"><img src="public/skirt_4.jpg"><h3>Skirt</h3><p>Petite Wine Plisse Fitted Waist Maxi Skirt<br>Size 2 4 6 8 10<br><br>Price ; $25</p></div>
   </div>
 
   <div style="margin: 2rem 0;">
@@ -181,7 +182,7 @@
     </div>
 
     <div class="copy-group">
-      <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States 🇺🇲</span></p>
+      <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States 🇺🇸</span></p>
       <button class="copy-btn" onclick="copyText('address')">📋 Copy</button>
     </div>
 
