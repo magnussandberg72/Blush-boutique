@@ -3,188 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blush Boutique – by Sandra</title>
-  <meta name="description" content="Blush Boutique by Sandra – Fashion, handbags & accessories with European charm and Florida spirit." />
+  <title>Blush Boutique ✨</title>
+  <meta name="description" content="European elegance meets Florida sunshine — curated by Sandra at Blush Boutique." />
   <link rel="icon" type="image/png" href="public/blush_boutique.png" />
 
   <style>
     :root {
-      --blush-pink: #f8d7e0;
-      --deep-rose: #c54b7c;
-      --soft-cream: #fff9fb;
+      --pink-light: #fdeaf1;
+      --pink-accent: #c54b7c;
       --text-dark: #333;
+      --gray-btn: #777;
     }
 
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
-      background: linear-gradient(to bottom right, var(--soft-cream), var(--blush-pink));
       color: var(--text-dark);
+      background: linear-gradient(to bottom right, #fff, var(--pink-light));
       text-align: center;
-      overflow-x: hidden;
     }
 
     header {
-      position: relative;
-      width: 100%;
-    }
-
-    header img {
-      width: 100%;
-      height: auto;
-      max-height: 550px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .intro {
-      padding: 2rem 1rem;
+      background: url("public/blush.jpg") center/cover no-repeat;
+      height: 65vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 2rem;
     }
 
     h1 {
       font-family: "Playfair Display", serif;
-      color: var(--deep-rose);
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+      color: var(--pink-accent);
+      font-size: 2.4rem;
+      margin: 0;
     }
 
     p.subtitle {
       color: #555;
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
+    main {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
+    /* Buttons */
     .btn {
-      background: #777;
-      color: white;
-      padding: 0.9rem 1.8rem;
+      background: var(--gray-btn);
+      color: #fff;
+      padding: 0.8rem 1.6rem;
       border-radius: 30px;
       text-decoration: none;
+      display: inline-block;
       font-weight: 500;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
     }
-
     .btn:hover {
       background: #555;
       transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
     }
+
+    /* Copy sections */
+    .section-title {
+      font-weight: 700;
+      color: var(--pink-accent);
+      margin-top: 3rem;
+    }
+
+    .copy-group {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 420px;
+      text-align: left;
+    }
+
+    .copy-btn {
+      background: var(--gray-btn);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      float: right;
+    }
+    .copy-btn:hover { background: #555; }
 
     footer {
-      background: rgba(255, 255, 255, 0.7);
+      margin-top: 3rem;
+      background: rgba(255,255,255,0.6);
+      color: #666;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #555;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .btn {
-        padding: 0.8rem 1.4rem;
-      }
+    @media (min-width: 800px) {
+      header { height: 75vh; padding-bottom: 3rem; }
+      h1 { font-size: 3rem; }
+      p.subtitle { font-size: 1.3rem; }
+      .copy-group { max-width: 520px; font-size: 1rem; }
     }
-
-.copy-group {
-  background: rgba(255, 255, 255, 0.7);
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  max-width: 350px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.copy-btn {
-  background: #777;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.copy-btn:hover {
-  background: #555;
-}
   </style>
 </head>
 
 <body>
   <header>
-    <img src="public/blush_boutique.png" alt="Blush Boutique" />
+    <div>
+      <h1>Welcome<br>to Blush Boutique 💗</h1>
+      <p class="subtitle">European elegance meets Florida sunshine — curated by Sandra.</p>
+    </div>
   </header>
 
-  <section class="intro">
-    <h1>Welcome<br>
-      to Blush Boutique 💗</h1>
-    <p class="subtitle">European elegance meets Florida sunshine — curated by Sandra.</p>
+  <main>
+    <a href="store.html" class="btn">🛍️ Visit Shop</a>
+    <a href="about.html" class="btn">💫 About Sandra</a>
 
-    <div class="buttons">
-      <a href="shop.html" class="btn">🛍️ Visit Shop</a>
-      <a href="about.html" class="btn">✨ About Sandra</a>
+    <h2 class="section-title">💌 Contact Sandra</h2>
+    <div class="copy-group">
+      <p>📧 Email: <strong>sandraan049@gmail.com</strong></p>
     </div>
-  </section>
+    <div class="copy-group">
+      <p>📞 Phone: <span id="phone">+1 305 574 4835</span>
+      <button class="copy-btn" onclick="copyText('phone')">Copy</button></p>
+    </div>
+    <div class="copy-group">
+      <p>🏬 Address:<br><span id="address">Blush Boutique, Aventura Mall, 19501 Biscayne Blvd, Aventura, FL 33180, USA 🇺🇸</span>
+      <button class="copy-btn" onclick="copyText('address')">Copy</button></p>
+    </div>
 
-<section class="contact">
-  <h2>💌 Contact Sandra</h2>
-  <a href="mailto:sandraan049@gmail.com" class="btn">📧 Send Email</a>
-  <br><br>
-
-  <div class="copy-group">
-    <p>📞 <span id="phone">+1 305 574 4835</span></p>
-    <button class="copy-btn" onclick="copyText('phone')">📋 Copy</button>
-  </div>
-
-  <div class="copy-group">
-    <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States</span></p>
-    <button class="copy-btn" onclick="copyText('address')">📋 Copy</button>
-  </div>
-
-  <hr>
-
-  <h3>💝 Gifts & Support are appreciated</h3>
-
-  <div class="copy-group">
-    <p>💰 BTC:<br><span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span></p>
-    <button class="copy-btn" onclick="copyText('btc')">📋 Copy</button>
-  </div>
-
-  <div class="copy-group">
-    <p>💵 USDT (TRC20):<br><span id="usdt">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span></p>
-    <button class="copy-btn" onclick="copyText('usdt')">📋 Copy</button>
-  </div>
-
-  <div class="copy-group">
-    <p>💳 PayPal:<br><span id="paypal">sandraan049@gmail.com</span></p>
-    <button class="copy-btn" onclick="copyText('paypal')">📋 Copy</button>
-<br><br>
-  </div>
-</section>
-
-<script>
-  function copyText(id) {
-    const text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("✅ Copied: " + text);
-    });
-  }
-</script>
+    <h2 class="section-title">💝 Gifts & Support are appreciated</h2>
+    <div class="copy-group">
+      <p>💰 BTC: <span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span>
+      <button class="copy-btn" onclick="copyText('btc')">Copy</button></p>
+    </div>
+    <div class="copy-group">
+      <p>💵 USDT (TRC20): <span id="usdt">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span>
+      <button class="copy-btn" onclick="copyText('usdt')">Copy</button></p>
+    </div>
+    <div class="copy-group">
+      <p>💳 PayPal: <span id="paypal">sandraan049@gmail.com</span>
+      <button class="copy-btn" onclick="copyText('paypal')">Copy</button></p>
+    </div>
+  </main>
 
   <footer>
     © 2025 Blush Boutique — Designed by Magnus T Gustav Sandberg
   </footer>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => alert("✅ Copied: " + text));
+    }
+  </script>
 </body>
 </html>
