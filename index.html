@@ -22,51 +22,36 @@
       text-align: center;
     }
 
-    /* ===== HERO SECTION ===== */
+    /* === HERO IMAGE === */
     .hero {
-      position: relative;
       width: 100%;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-top: 1rem;
     }
 
     .hero img {
       width: 100%;
       height: auto;
-      max-height: 95vh;
-      object-fit: contain; /* visar hela bilden */
-      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     }
 
-    .overlay {
-      position: absolute;
-      bottom: 10%;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 1.2rem 1.6rem;
-      border-radius: 14px;
-      backdrop-filter: blur(6px);
-      text-align: center;
-      width: 80%;
-      max-width: 480px;
-    }
-
-    .overlay h1 {
-      font-family: "Playfair Display", serif;
+    h1 {
       color: var(--pink-accent);
-      font-size: 2rem;
-      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 2.3rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
     }
 
-    .overlay p {
-      color: #444;
-      font-size: 1rem;
-      margin-top: 0.4rem;
+    p.subtitle {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
 
-    /* ===== BUTTONS ===== */
+    /* === BUTTONS === */
     .btn {
       background: var(--gray-btn);
       color: #fff;
@@ -91,7 +76,7 @@
       margin: 0 auto;
     }
 
-    /* ===== COPY BLOCKS ===== */
+    /* === COPY BLOCKS === */
     .section-title {
       font-weight: 700;
       color: var(--pink-accent);
@@ -130,28 +115,29 @@
     }
 
     @media (min-width: 800px) {
-      .overlay h1 { font-size: 2.6rem; }
-      .overlay p { font-size: 1.2rem; }
+      h1 { font-size: 2.8rem; }
+      p.subtitle { font-size: 1.2rem; }
       .copy-group { max-width: 520px; font-size: 1rem; }
     }
   </style>
 </head>
 
 <body>
-  <!-- HERO SECTION -->
-  <header class="hero">
+  <!-- HERO IMAGE -->
+  <section class="hero">
     <img src="public/blush_store.jpg" alt="Sandra at Blush Boutique">
-    <div class="overlay">
-      <h1>Welcome to Blush Boutique 💗</h1>
-      <p>European elegance meets Florida sunshine — curated by Sandra.</p>
-    </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Navigation Buttons -->
+  <h1>Welcome to Blush Boutique 💗</h1>
+  <p class="subtitle">European elegance meets Florida sunshine — curated by Sandra.</p>
+
+  <!-- Navigation Buttons -->
+  <div>
     <a href="store.html" class="btn">🛍️ Visit Shop</a>
     <a href="about.html" class="btn">💫 About Sandra</a>
+  </div>
 
+  <main>
     <!-- Contact Info -->
     <h2 class="section-title">💌 Contact Sandra</h2>
     <div class="copy-group">
