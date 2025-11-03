@@ -3,55 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blush Boutique ✨</title>
+  <title>Blush Boutique 💗</title>
   <meta name="description" content="European elegance meets Florida sunshine — curated by Sandra at Blush Boutique." />
   <link rel="icon" type="image/png" href="public/blush_boutique.png" />
 
   <style>
     :root {
-      --pink-light: #fdeaf1;
       --pink-accent: #c54b7c;
-      --text-dark: #333;
       --gray-btn: #777;
+      --bg-gradient: linear-gradient(to bottom right, #fff, #fdeaf1);
     }
 
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
-      color: var(--text-dark);
-      background: linear-gradient(to bottom right, #fff, var(--pink-light));
+      color: #333;
+      background: var(--bg-gradient);
       text-align: center;
     }
 
-    header {
-      background: url("public/blush.jpg") center/cover no-repeat;
-      height: 65vh;
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      padding-bottom: 2rem;
     }
 
-    h1 {
+    .hero img {
+      width: 100%;
+      height: auto;
+      max-height: 95vh;
+      object-fit: contain; /* visar hela bilden */
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 10%;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 1.2rem 1.6rem;
+      border-radius: 14px;
+      backdrop-filter: blur(6px);
+      text-align: center;
+      width: 80%;
+      max-width: 480px;
+    }
+
+    .overlay h1 {
       font-family: "Playfair Display", serif;
       color: var(--pink-accent);
-      font-size: 2.4rem;
+      font-size: 2rem;
       margin: 0;
     }
 
-    p.subtitle {
-      color: #555;
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
+    .overlay p {
+      color: #444;
+      font-size: 1rem;
+      margin-top: 0.4rem;
     }
 
-    main {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    /* Buttons */
+    /* ===== BUTTONS ===== */
     .btn {
       background: var(--gray-btn);
       color: #fff;
@@ -64,16 +79,23 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease;
     }
+
     .btn:hover {
       background: #555;
       transform: translateY(-2px);
     }
 
-    /* Copy sections */
+    main {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ===== COPY BLOCKS ===== */
     .section-title {
       font-weight: 700;
       color: var(--pink-accent);
-      margin-top: 3rem;
+      margin-top: 2.5rem;
     }
 
     .copy-group {
@@ -96,6 +118,7 @@
       cursor: pointer;
       float: right;
     }
+
     .copy-btn:hover { background: #555; }
 
     footer {
@@ -107,26 +130,29 @@
     }
 
     @media (min-width: 800px) {
-      header { height: 75vh; padding-bottom: 3rem; }
-      h1 { font-size: 3rem; }
-      p.subtitle { font-size: 1.3rem; }
+      .overlay h1 { font-size: 2.6rem; }
+      .overlay p { font-size: 1.2rem; }
       .copy-group { max-width: 520px; font-size: 1rem; }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div>
-      <h1>Welcome<br>to Blush Boutique 💗</h1>
-      <p class="subtitle">European elegance meets Florida sunshine — curated by Sandra.</p>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <img src="public/blush_store.jpg" alt="Sandra at Blush Boutique">
+    <div class="overlay">
+      <h1>Welcome to Blush Boutique 💗</h1>
+      <p>European elegance meets Florida sunshine — curated by Sandra.</p>
     </div>
   </header>
 
   <main>
+    <!-- Navigation Buttons -->
     <a href="store.html" class="btn">🛍️ Visit Shop</a>
     <a href="about.html" class="btn">💫 About Sandra</a>
 
+    <!-- Contact Info -->
     <h2 class="section-title">💌 Contact Sandra</h2>
     <div class="copy-group">
       <p>📧 Email: <strong>sandraan049@gmail.com</strong></p>
@@ -140,6 +166,7 @@
       <button class="copy-btn" onclick="copyText('address')">Copy</button></p>
     </div>
 
+    <!-- Support -->
     <h2 class="section-title">💝 Gifts & Support are appreciated</h2>
     <div class="copy-group">
       <p>💰 BTC: <span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span>
