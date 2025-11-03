@@ -40,6 +40,7 @@
       margin-bottom: 2rem;
     }
 
+    /* === Product Grid === */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -50,11 +51,12 @@
     }
 
     .card {
-      background: white;
+      background: #fff;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+      padding-bottom: 1rem;
     }
 
     .card:hover {
@@ -63,10 +65,12 @@
     }
 
     .card img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  background: #fff;
+      width: 100%;
+      height: auto;
+      object-fit: contain; /* visar hela bilden */
+      max-height: 500px;   /* stoppar överlånga bilder */
+      background: #fff;
+      border-bottom: 1px solid #eee;
     }
 
     .card h3 {
@@ -78,8 +82,9 @@
 
     .card p {
       font-size: 0.95rem;
-      padding: 0 1rem 1.2rem;
+      padding: 0 1rem 0;
       color: #555;
+      line-height: 1.5;
     }
 
     /* ---------- Buttons ---------- */
@@ -102,23 +107,30 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.3);
     }
 
-    /* ---------- Contact & Support ---------- */
-    .contact {
-      margin: 2rem auto;
-      color: #444;
-      line-height: 1.6;
+    /* ---------- Copy Blocks ---------- */
+    .copy-group {
+      background: rgba(255, 255, 255, 0.7);
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 12px;
+      max-width: 350px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .support {
-      margin: 2rem auto 3rem;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      display: inline-block;
-      text-align: left;
-      font-size: 0.95rem;
-      max-width: 350px;
+    .copy-btn {
+      background: #777;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: #555;
     }
 
     footer {
@@ -126,88 +138,14 @@
       padding: 1.5rem 1rem;
       color: #777;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
 
     @media (max-width: 600px) {
-      .grid {
-        padding: 0 1rem 2rem;
-      }
       .card img {
-        height: 240px;
-      }
-      .support {
-        width: 90%;
+        max-height: 420px;
       }
     }
-.copy-group {
-  background: rgba(255, 255, 255, 0.7);
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  max-width: 350px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.copy-btn {
-  background: #777;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.copy-btn:hover {
-  background: #555;
-}
-
-<style>
-  /* === Produktkort === */
-  .card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 20px auto;
-    width: 90%;
-    max-width: 420px;
-    text-align: center;
-    min-height: 480px; /* ⬆️ Gör kortet högre */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  /* === Bild i kortet === */
-  .card img {
-    width: 100%;
-    height: 340px;       /* ⬆️ gör bilden större och proportionerlig */
-    object-fit: cover;   /* ser till att bilden beskärs snyggt */
-    border-radius: 10px;
-  }
-
-  /* === Texten under bilden === */
-  .card h3 {
-    color: #b23b72;
-    margin-top: 12px;
-    font-size: 1.4rem;
-  }
-
-  .card p {
-    color: #555;
-    margin: 8px 0;
-    line-height: 1.5;
-  }
-
-  @media (min-width: 768px) {
-    .card {
-      min-height: 420px; /* lite mindre på större skärmar */
-    }
-  }
-</style>
   </style>
 </head>
 
@@ -218,220 +156,63 @@
   </header>
 
   <div class="grid">
+    <!-- dina kort här, oförändrade -->
+    <!-- ex: -->
     <div class="card">
-      <img src="public/dress_1.jpg" alt="Sandra's leather bag" />
-      <h3>Black Skirt</h3>
-      <p>Premium Black Woven Draped Fishtail Maxi Skirt<br>
-         1 colour available, Size 4 6 8 10 12<br>
-        <br>
-         Price ; $50/each<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/shoe_1.jpg" alt="Shoe" />
-      <h3>Black Shoes</h3>
-      <p>Black Crinkle PU Buckle Kitten Heel Mule<br>
-         Size 3 4 5 6 7<br>
-        <br>
-        Price ; $25/pair.<br>
-      <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/corsett.jpg" alt="Sandra's accessories" />
-      <h3>Mint Corsett</h3>
-      <p>Mint Textured Sheer Floral Lace Corset<br>
-         SIZES 4 6 8 10 12<br>
-        <br>
-         Price ; $20/each.<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/boots_1.jpg" alt="Sandra's accessories" />
-      <h3>Black Boots</h3>
-      <p>Black PU Point Toe Knee High Block Heeled Boots<br>
-         SIZES 3 4 5 6 7<br>
-        <br>
-         Price ; $50<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/boot_2.jpg" alt="Sandra's accessories" />
-      <h3>Black boots</h3>
-      <p>Linzi Frosty Black Faux Leather Block Heeled Knee High Boot<br>
-         Product code: M00588092BLACK<br>
-         SIZES 3 4 5 6 7<br>
-        <br>
-         Price ; $70<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/corsett_2.jpg" alt="Sandra's accessories" />
-      <h3>Black Corset</h3>
-      <p>Black Textured Sheer Floral Lace Corset<br>
-         SIZES 4 6 8 10 12<br>
-        <br>
-         Price ; $30<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/dress_2.jpg" alt="Sandra's accessories" />
-      <h3>Mini Dress</h3>
-      <p>PLT Label Dark Red Hammered Satin Long Sleeve Plunge Mini Dress<br>
-         SIZES 4 6 8 10 12 <br>
-        <br>
-         Price ; $30<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/shoe_2.jpg" alt="Sandra's accessories" />
-      <h3>Sandals</h3>
-      <p>Nude Pu Square Toe Barley There High Heeled Sandals<br>
-         SIZES 3 4 5 6 7 <br>
-        <br>
-         Price ; $20<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_1.jpg" alt="Sandra's accessories" />
+      <img src="public/skirt_4.jpg" alt="Wine skirt" />
       <h3>Skirt</h3>
-      <p>Petite Stone Crochet Low Rise Maxi Skirt. I colour Available<br>
-         SIZES 4 6 8 10 12<br>
-        <br>
-         Price ; $25<br>
-        <br></p>
+      <p>Petite Wine Plisse Fitted Waist Maxi Skirt<br>SIZES 2 4 6 8 10<br><br>Price ; $25<br></p>
     </div>
-
-    <div class="card">
-      <img src="public/skirt_2.jpg" alt="Sandra's accessories" />
-      <h3>Skirt</h3>
-      <p>Petite Stone Mid Rise Maxi Skirt.<br>
-         SIZES 2 4 6 8 10<br>
-        <br>
-         Price ; $20<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_3.jpg" alt="Sandra's accessories" />
-      <h3>Skirt</h3>
-      <p>Petite White Plisse Fitted Waist Maxi Skirt<br>
-         SIZES 2 4 6 8 10<br>
-        <br>
-         Price ; $30<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_4.jpg" alt="Sandra's accessories" />
-      <h3>Skirt</h3>
-      <p>Petite Wine Plisse Fitted Waist Maxi Skirt<br>
-         SIZES 2 4 6 8 10<br>
-        <br>
-         Price ; 25$<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_4.jpg" alt="Sandra's accessories" />
-      <h3>Soon item here</h3>
-      <p>Soon item here<br>
-         SIZES <br>
-        <br>
-         Price ; $<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_4.jpg" alt="Sandra's accessories" />
-      <h3>Soon item here</h3>
-      <p>Soon item here<br>
-         SIZES <br>
-        <br>
-         Price ; $<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_4.jpg" alt="Sandra's accessories" />
-      <h3>Soon item here</h3>
-      <p>Soon item here<br>
-         SIZES <br>
-        <br>
-         Price ; $<br>
-        <br></p>
-    </div>
-
-    <div class="card">
-      <img src="public/skirt_4.jpg" alt="Sandra's accessories" />
-      <h3>Soon item here</h3>
-      <p>Soon item here<br>
-         SIZES <br>
-        <br>
-         Price ; $<br>
-        <br></p>
-    </div>
-
-    
   </div>
 
-  <!-- Navigation Buttons -->
   <div style="margin: 2rem 0;">
     <a href="index.html" class="btn gray">🏠 Home</a>
     <a href="about.html" class="btn gray">💫 About Sandra</a>
     <a href="#" class="btn gray">🛍️ Online Boutique (coming soon)</a>
   </div>
 
-  <!-- Contact Info -->
   <section class="contact">
-  <h2>💌 Contact/Call the store/Sandra</h2>
-  <p><a href="mailto:sandraan049@gmail.com">📧 Email</a></p>
+    <h2>💌 Contact/Call the store/Sandra</h2>
+    <p><a href="mailto:sandraan049@gmail.com">📧 Email</a></p>
 
-  <div class="copy-group">
-    <p>📞 <span id="phone">+1 305 574 4835</span></p>
-    <button class="copy-btn" onclick="copyText('phone')">📋 Copy</button>
-  </div>
+    <div class="copy-group">
+      <p>📞 <span id="phone">+1 305 574 4835</span></p>
+      <button class="copy-btn" onclick="copyText('phone')">📋 Copy</button>
+    </div>
 
-  <div class="copy-group">
-    <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States 🇺🇲</span></p>
-    <button class="copy-btn" onclick="copyText('address')">📋 Copy</button>
-  </div>
+    <div class="copy-group">
+      <p>🏬 <span id="address">Blush Boutique, Aventura Mall<br>19501 Biscayne Blvd, Aventura, FL 33180, United States 🇺🇲</span></p>
+      <button class="copy-btn" onclick="copyText('address')">📋 Copy</button>
+    </div>
 
-  <hr>
+    <hr>
 
-  <h3>💝 Gifts & Support are appreciated</h3>
+    <h3>💝 Gifts & Support are appreciated</h3>
 
-  <div class="copy-group">
-    <p>💰 BTC (Bitcoin):<br><span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span></p>
-    <button class="copy-btn" onclick="copyText('btc')">📋 Copy adress</button>
-  </div>
+    <div class="copy-group">
+      <p>💰 BTC (Bitcoin):<br><span id="btc">3EnRdLbLvUcvEgqeaSJ1bRTdD8g5kDHgm4</span></p>
+      <button class="copy-btn" onclick="copyText('btc')">📋 Copy address</button>
+    </div>
 
-  <div class="copy-group">
-    <p>💵 USDT (TRC20):<br><span id="usdt">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span></p>
-    <button class="copy-btn" onclick="copyText('usdt')">📋 Copy adress</button>
-  </div>
+    <div class="copy-group">
+      <p>💵 USDT (TRC20):<br><span id="usdt">TRLcYKo12zLk1zLYmzJYEfh8V3Cwmqtkec</span></p>
+      <button class="copy-btn" onclick="copyText('usdt')">📋 Copy address</button>
+    </div>
 
-  <div class="copy-group">
-    <p>💳 PayPal:<br><span id="paypal">sandraan049@gmail.com</span></p>
-    <button class="copy-btn" onclick="copyText('paypal')">📋 Copy Paypal</button>
-  </div>
-</section>
+    <div class="copy-group">
+      <p>💳 PayPal:<br><span id="paypal">sandraan049@gmail.com</span></p>
+      <button class="copy-btn" onclick="copyText('paypal')">📋 Copy PayPal</button>
+    </div>
+  </section>
 
-<script>
-  function copyText(id) {
-    const text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("✅ Copied: " + text);
-    });
-  }
-</script>
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("✅ Copied: " + text);
+      });
+    }
+  </script>
 
   <footer>
     © 2025 Blush Boutique — Designed by Magnus T Gustav Sandberg
